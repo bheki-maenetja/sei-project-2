@@ -23,6 +23,8 @@ const HeroSearchForm = ({ basicSearchFunction, getAdvancedSearchData, resetData,
       <div className="field column is-one-quarter">
         <div className="control">
           <label className="label">Alignment</label>
+          <p>Any</p>
+          <input className="radio" type="radio" name="alignment" onChange={searchFunction} value={''} checked={stateVars.advancedSearchParameters.alignment === ''} />
           {stateVars.advancedSearchData.alignments.map(item => (
             <>
             <p>{item}</p>
@@ -34,6 +36,8 @@ const HeroSearchForm = ({ basicSearchFunction, getAdvancedSearchData, resetData,
       <div className="field column is-one-quarter">
         <div className="control">
           <label className="label">Gender</label>
+          <p>Any</p>
+          <input className="radio" type="radio" name="gender" onChange={searchFunction} value={''} checked={stateVars.advancedSearchParameters.gender === ''} />
           {stateVars.advancedSearchData.genders.map(item => (
             <>
             <p>{item}</p>
@@ -46,6 +50,7 @@ const HeroSearchForm = ({ basicSearchFunction, getAdvancedSearchData, resetData,
         <div className="control">
           <label className="label">Race</label>
           <select className="select" name="race" onChange={searchFunction} value={stateVars.advancedSearchParameters.race}>
+            <option value={''}>Any</option>
             {stateVars.advancedSearchData.races.map(item => (
               <option value={item} key={item}>{item}</option>
             ))}
@@ -55,7 +60,8 @@ const HeroSearchForm = ({ basicSearchFunction, getAdvancedSearchData, resetData,
       <div className="field column is-one-quarter">
         <div className="control">
           <label className="label">Publisher</label>
-          <select className="select" name="publisher" onChange={searchFunction} value={stateVars.advancedSearchParameters.alignment}>
+          <select className="select" name="publisher" onChange={searchFunction} value={stateVars.advancedSearchParameters.publisher}>
+            <option value={''}>Any</option>
             {stateVars.advancedSearchData.publishers.map(item => (
               <option value={item} key={item}>{item}</option>
             ))}

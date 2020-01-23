@@ -11,10 +11,10 @@ class HeroIndex extends React.Component {
     displayAdvancedSearch: false,
     advancedSearchData: null,
     advancedSearchParameters: {
-      race: 'Human',
-      gender: 'Male',
-      publisher: 'Marvel Comics',
-      alignment: 'good'
+      race: '',
+      gender: '',
+      publisher: '',
+      alignment: ''
     }
   }
 
@@ -82,13 +82,16 @@ class HeroIndex extends React.Component {
     const searchParams = this.state.advancedSearchParameters
     searchParams[e.target.name] = e.target.value
     const searchData = this.state.data.filter(item => (
-      item.biography.alignment === searchParams.alignment && item.appearance.gender === searchParams.gender && item.appearance.race === searchParams.race && item.biography.publisher === searchParams.publisher
+      (item.biography.alignment === searchParams.alignment || !searchParams.alignment) && 
+      (item.appearance.gender === searchParams.gender || !searchParams.gender) && 
+      (item.appearance.race === searchParams.race || !searchParams.race) && 
+      (item.biography.publisher === searchParams.publisher || !searchParams.publisher)
     ))
     this.setState({ searchData, advancedSearchParameters: searchParams })
   }
 
   resetData = () => {
-    this.setState({ searchData: this.state.data, advancedSearchParameters: { race: 'Human', gender: 'Male', publisher: 'Marvel Comics', alignment: 'good' } })
+    this.setState({ searchData: this.state.data, advancedSearchParameters: { race: '', gender: '', publisher: '', alignment: '' } })
   }
 
   render() {
@@ -104,73 +107,10 @@ class HeroIndex extends React.Component {
             searchFunction={this.searchFunction}
             {...this.state}
           />
-          {/* <form onSubmit={(e) => e.preventDefault()}>
-            <div className="field has-addons">
-              <div className="control">
-                <input className="input" placeholder="Search" onChange={this.basicSearchFunction}/>
-              </div>
-              <div className="control">
-                <button type="submit" className="button is-primary">Search</button>
-              </div>
-              <div className="control">
-                <button className="button is-success" onClick={this.getAdvancedSearchData}>Advanced Search</button>
-              </div>
-              <div className="control">
-                <button className="button is-danger" onClick={this.resetData}>Clear</button>
-              </div>
-            </div>
-            {this.state.displayAdvancedSearch &&
-              <>
-              <div className="columns">
-                <div className="field column is-one-quarter">
-                  <div className="control">
-                    <label className="label">Alignment</label>
-                    {this.state.advancedSearchData.alignments.map(item => (
-                      <>
-                      <p>{item}</p>
-                      <input key={item} className="radio" type="radio" onChange={this.searchFunction} name='alignment' value={item} checked={item === this.state.advancedSearchParameters.alignment} />
-                      </>
-                    ))}
-                  </div>
-                </div>
-                <div className="field column is-one-quarter">
-                  <div className="control">
-                    <label className="label">Gender</label>
-                    {this.state.advancedSearchData.genders.map(item => (
-                      <>
-                      <p>{item}</p>
-                      <input key={item} className="radio" type="radio" name='gender' onChange={this.searchFunction} value={item} checked={item === this.state.advancedSearchParameters.gender} />
-                      </>
-                    ))}
-                  </div>
-                </div>
-                <div className="field column is-one-quarter">
-                  <div className="control">
-                    <label className="label">Race</label>
-                    <select className="select" name="race" onChange={this.searchFunction} value={this.state.advancedSearchParameters.race}>
-                      {this.state.advancedSearchData.races.map(item => (
-                        <option value={item} key={item}>{item}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                <div className="field column is-one-quarter">
-                  <div className="control">
-                    <label className="label">Publisher</label>
-                    <select className="select" name="publisher" onChange={this.searchFunction} value={this.state.advancedSearchParameters.alignment}>
-                      {this.state.advancedSearchData.publishers.map(item => (
-                        <option value={item} key={item}>{item}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-              </div>
-              </>
-            }
-          </form> */}
         </div>
         <div className="container">
           <div className="columns is-mobile is-multiline">
+            {this.state.searchData.length === 0 && <h1 className="title is-1">No Matches. Try Again</h1>}
             {this.state.searchData.map(item => {
               return (
                 <HeroCard {...item} key={item.id}/>

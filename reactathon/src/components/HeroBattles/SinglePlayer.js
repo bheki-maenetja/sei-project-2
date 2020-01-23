@@ -65,12 +65,20 @@ class SinglePlayer extends React.Component {
       this.setState({ winner: 'secondChoice', gameInPlay: true })
     } else {
       result = 'it\'s a draw!'
+      this.setState({ gameInPlay: true })
     }
     console.log(result)
   }
 
   resetPage = () => {
-    console.log('Page will be reset')
+    this.setState({ 
+      gameInPlay: false, 
+      gotFirstChoice: false, 
+      gotSecondChoice: false, 
+      winner: '', 
+      firstChoice: this.state.data[0],
+      secondChoice: this.state.data[0]
+    })
   }
 
   render() {

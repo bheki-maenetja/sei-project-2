@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import SinglePlayerCard from '../HeroBattles/SinglePlayerCard'
+
 class HeroProfile extends React.Component {
 
   state = {
@@ -21,7 +23,7 @@ class HeroProfile extends React.Component {
 
   render() {
     if (!this.state.heroData) return false
-    const { images, name, biography, work } = this.state.heroData
+    const { images, name, biography, work, appearance, connections } = this.state.heroData
     return (
       <section className="section">
         <div className="container">
@@ -29,23 +31,47 @@ class HeroProfile extends React.Component {
           <hr />
           <div className="columns">
             <div className="column is-half">
-              <figure className="image">
-                <img src={images.lg} alt="an image will go here" />
-              </figure>
+              <SinglePlayerCard 
+                choiceObject={this.state.heroData}
+                choiceBoolean={false}
+                handleConfirm={() => ''}
+                buttonName={''}
+              />
             </div>
             <div className="column is-half">
-              <h4 className="title is-4">Full Name</h4>
-              <p>{biography.fullName}</p>
+              <h2 className="title is-2">Biography</h2>
               <hr />
-              <h4 className="title is-4">Aliases</h4>
-              <p>{biography.aliases.join(', ')}</p>
+              {Object.keys(biography).map(item => {
+                return (
+                  <>
+                  <h5 className="title is-5">{item}</h5>
+                  <p>{typeof biography[item] === 'string' ? biography[item] : biography[item].join(', ')}</p>
+                  <hr />
+                  </>
+                )
+              })}
+              <h2 className="title is-2">Work</h2>
               <hr />
-              <h4 className="title is-4">Alter Egos</h4>
-              <p>{biography.alterEgos}</p>
+              {Object.keys(work).map(item => {
+                return (
+                  <>
+                  <h5 className="title is-5">{item}</h5>
+                  <p>{work[item]}</p>
+                  <hr />
+                  </>
+                )
+              })}
+              <h2 className="title is-2">Connections</h2>
               <hr />
-              <h4 className="title is-4">Job</h4>
-              <p>{work.occupation}</p>
-              <hr />
+              {Object.keys(connections).map(item => {
+                return (
+                  <>
+                  <h5 className="title is-5">{item}</h5>
+                  <p>{typeof connections[item] === 'string' ? connections[item] : connections[item].join(', ')}</p>
+                  <hr />
+                  </>
+                )
+              })}
             </div>
           </div>
         </div>

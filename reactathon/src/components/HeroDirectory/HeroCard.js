@@ -17,4 +17,5 @@ const HeroCard = ({ name, images, id }) => (
     </Link>
   </div>
 )
+
 export default HeroCard

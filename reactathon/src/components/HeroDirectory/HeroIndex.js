@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 import HeroCard from './HeroCard'
+import HeroSearchForm from './HeroSearchForm'
 
 class HeroIndex extends React.Component {
   state = { 
@@ -96,7 +97,14 @@ class HeroIndex extends React.Component {
       <>
       <section className="section">
         <div className="column is-fullwidth">
-          <form onSubmit={(e) => e.preventDefault()}>
+          <HeroSearchForm 
+            basicSearchFunction={this.basicSearchFunction}
+            getAdvancedSearchData={this.getAdvancedSearchData}
+            resetData={this.resetData}
+            searchFunction={this.searchFunction}
+            {...this.state}
+          />
+          {/* <form onSubmit={(e) => e.preventDefault()}>
             <div className="field has-addons">
               <div className="control">
                 <input className="input" placeholder="Search" onChange={this.basicSearchFunction}/>
@@ -159,7 +167,7 @@ class HeroIndex extends React.Component {
               </div>
               </>
             }
-          </form>
+          </form> */}
         </div>
         <div className="container">
           <div className="columns is-mobile is-multiline">

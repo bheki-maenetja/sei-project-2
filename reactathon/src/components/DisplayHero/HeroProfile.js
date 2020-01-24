@@ -21,6 +21,7 @@ class HeroProfile extends React.Component {
 
   render() {
     if (!this.state.heroData) return false
+    console.log(this.state)
     const { name, biography, work, connections } = this.state.heroData
     return (
       <section className="section hero-profile">

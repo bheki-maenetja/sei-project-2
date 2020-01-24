@@ -1,5 +1,19 @@
 .hero-index {
   background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/504400/7137a244129d366493dc526bcc1e1b51f7f89de5.jpg');
   background-size: cover;
-  background-position: center; 
+  background-position: center;
+
+  .columns > h1 {
+    color: white;
+  }
+
+  form {
+    *:not(select) {
+      color: white;
+    }
+
+    input {
+      color: black
+    }
+  }
 }

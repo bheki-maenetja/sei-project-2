@@ -1,3 +1,19 @@
 .single-player-card {
-  border: 2px solid cyan
+  border-radius: 0px 0px 15px 15px;
+
+  .card-content {
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bolder;
+    border-radius: 0px 0px 15px 15px;
+    
+    h1, h2, h3, h4, h5 {
+      color: white;
+      font-weight: bolder;
+    }
+
+    h3, h4 {
+      text-align: center;
+    }
+  }
 }

@@ -11,7 +11,7 @@ const SinglePlayerCard = ({ choiceObject, choiceBoolean, handleConfirm, buttonNa
     </div>
     <div className="card-content">
       <h3 className="title is-3">POWER STATS</h3>
-      <h5 className="subtitle is-5">{choiceObject.name}</h5>
+      <h4 className="subtitle is-5">{choiceObject.name}</h4>
       <hr />
       {Object.keys(choiceObject.powerstats).map((stat, i) => {
         return (

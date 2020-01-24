@@ -11,7 +11,7 @@ const HeroCard = ({ name, images, id }) => (
           </figure>
         </div>
         <div className="card-content">
-          <h1>{name}</h1>
+          <h1 className="title is-6">{name}</h1>
         </div>
       </div>
     </Link>

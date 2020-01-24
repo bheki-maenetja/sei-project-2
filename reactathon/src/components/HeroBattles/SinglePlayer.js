@@ -85,7 +85,7 @@ class SinglePlayer extends React.Component {
     if (!this.state.firstChoice) return false
     console.log(this.state)
     return (
-      <section className="section">
+      <section className="section hero-battle">
         <div className="container">
           <div className="container">
             {this.state.gotFirstChoice && this.state.gotSecondChoice &&
@@ -94,15 +94,17 @@ class SinglePlayer extends React.Component {
           </div>
           <div className="columns">
             <div className={`column is-half ${this.state.gotFirstChoice ? '' : 'is-offset-one-quarter'}`}>
-              {!this.state.gotFirstChoice &&
-              <SinglePlayerChoiceForm 
-                choiceObject={this.state.firstChoice}
-                heroData={this.state.data}
-                handleChange={this.handleChange}
-                getRandomHero={this.getRandomHero}
-                name={'firstChoice'}
-              />
-              }
+              <div className="title">
+                {!this.state.gotFirstChoice &&
+                <SinglePlayerChoiceForm 
+                  choiceObject={this.state.firstChoice}
+                  heroData={this.state.data}
+                  handleChange={this.handleChange}
+                  getRandomHero={this.getRandomHero}
+                  name={'firstChoice'}
+                />
+                }
+              </div>
               {this.state.gameInPlay && <h1 className="title is-1">{this.state.winner === 'firstChoice' ? 'Winner' : 'Loser'}</h1>}
               <SinglePlayerCard 
                 choiceObject={this.state.firstChoice}
@@ -113,15 +115,17 @@ class SinglePlayer extends React.Component {
             </div>
             {this.state.gotFirstChoice && 
             <div className="column is-half">
-              {!this.state.gotSecondChoice &&
-              <SinglePlayerChoiceForm 
-                choiceObject={this.state.secondChoice}
-                heroData={this.state.data}
-                handleChange={this.handleChange}
-                getRandomHero={this.getRandomHero}
-                name={'secondChoice'}
-              />
-              }
+              <div className="title">
+                {!this.state.gotSecondChoice &&
+                <SinglePlayerChoiceForm 
+                  choiceObject={this.state.secondChoice}
+                  heroData={this.state.data}
+                  handleChange={this.handleChange}
+                  getRandomHero={this.getRandomHero}
+                  name={'secondChoice'}
+                />
+                }
+              </div>
               {this.state.gameInPlay && <h1 className="title is-1">{this.state.winner === 'secondChoice' ? 'Winner' : 'Loser'}</h1>}
               <SinglePlayerCard 
                 choiceObject={this.state.secondChoice}

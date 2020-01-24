@@ -23,7 +23,7 @@ class HeroProfile extends React.Component {
 
   render() {
     if (!this.state.heroData) return false
-    const { images, name, biography, work, appearance, connections } = this.state.heroData
+    const { name, biography, work, connections } = this.state.heroData
     return (
       <section className="section">
         <div className="container">
@@ -44,7 +44,7 @@ class HeroProfile extends React.Component {
               {Object.keys(biography).map(item => {
                 return (
                   <>
-                  <h5 className="title is-5">{item}</h5>
+                  <h5 className="title is-5">{item.toUpperCase()}</h5>
                   <p>{typeof biography[item] === 'string' ? biography[item] : biography[item].join(', ')}</p>
                   <hr />
                   </>
@@ -55,7 +55,7 @@ class HeroProfile extends React.Component {
               {Object.keys(work).map(item => {
                 return (
                   <>
-                  <h5 className="title is-5">{item}</h5>
+                  <h5 className="title is-5">{item.toUpperCase()}</h5>
                   <p>{work[item]}</p>
                   <hr />
                   </>
@@ -66,7 +66,7 @@ class HeroProfile extends React.Component {
               {Object.keys(connections).map(item => {
                 return (
                   <>
-                  <h5 className="title is-5">{item}</h5>
+                  <h5 className="title is-5">{item.toUpperCase()}</h5>
                   <p>{typeof connections[item] === 'string' ? connections[item] : connections[item].join(', ')}</p>
                   <hr />
                   </>

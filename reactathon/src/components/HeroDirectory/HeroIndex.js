@@ -98,15 +98,20 @@ class HeroIndex extends React.Component {
     console.log(this.state)
     return (
       <>
-      <section className="section">
-        <div className="column is-fullwidth">
-          <HeroSearchForm 
-            basicSearchFunction={this.basicSearchFunction}
-            getAdvancedSearchData={this.getAdvancedSearchData}
-            resetData={this.resetData}
-            searchFunction={this.searchFunction}
-            {...this.state}
-          />
+      <section className="section hero-index">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-fullwidth">
+              <HeroSearchForm 
+                basicSearchFunction={this.basicSearchFunction}
+                getAdvancedSearchData={this.getAdvancedSearchData}
+                resetData={this.resetData}
+                searchFunction={this.searchFunction}
+                {...this.state}
+              />
+            </div>
+          </div>
+          
         </div>
         <div className="container">
           <div className="columns is-mobile is-multiline">

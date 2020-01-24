@@ -3,20 +3,20 @@ import React from 'react'
 
 const SinglePlayerCard = ({ choiceObject, choiceBoolean, handleConfirm, buttonName }) => (
   <>
-  <div className="card">
+  <div className="card hero-card">
     <div className="card-image">
       <figure className="image">
         <img src={choiceObject.images.lg} alt="player choice" />
       </figure>
     </div>
     <div className="card-content">
-      <h3 className="title is-3">{choiceObject.name}</h3>
+      <h3 className="title is-3">POWER STATS</h3>
+      <h5 className="subtitle is-5">{choiceObject.name}</h5>
       <hr />
-      <h4 className="title is-4">Stats</h4>
       {Object.keys(choiceObject.powerstats).map((stat, i) => {
         return (
           <>
-          <h5 className="title is-5" key={i}>{stat}</h5>
+          <h5 className="title is-5" key={i}>{stat.toUpperCase()}</h5>
           <p>{choiceObject.powerstats[stat]}</p>
           <hr />
           </>

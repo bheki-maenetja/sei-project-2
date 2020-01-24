@@ -9,3 +9,28 @@
     font-weight: bolder;
   }
 }
+
+section {
+  height: 95vh;
+  overflow-y: scroll;
+}
+
+iframe {
+  border: 2px solid blue;
+}
+
+.hero-index {
+  background-image: url('https://media3.giphy.com/media/dAWZiSMbMvObDWP3aA/giphy.gif');
+  background-size: cover;
+  background-position: center; 
+}
+
+.hero-card {
+  opacity: 1;
+}
+
+.hero-battle {
+  background-image: url('https://www.cultjer.com/img/ug_photo/2015_08/16183820150828125110.jpg');
+  background-size: cover;
+  background-position: center;
+}

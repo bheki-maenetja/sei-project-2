@@ -9,6 +9,7 @@ class ExternalLinks extends React.Component {
     boom: 'http://www.boom-studios.com/',
     superHeroHype: 'https://www.mcmcomiccon.com/london-may-2020',
     batmanNews: 'https://batman-news.com/',
+    starWars: 'https://www.starwars.com/',
     chosenSite: 'https://www.marvel.com/'
   }
 
@@ -49,6 +50,9 @@ class ExternalLinks extends React.Component {
                 </div>
                 <div className="control">
                   <button className="button is-dark" onClick={this.setSite} value="batmanNews">Batman News</button>
+                </div>
+                <div className="control">
+                  <button className="button is-info" onClick={this.setSite} value="starWars">Star Wars</button>
                 </div>
               </div>
             </div>

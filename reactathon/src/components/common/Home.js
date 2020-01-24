@@ -5,7 +5,8 @@ const Home = () => (
   <section className="hero is-fullheight-with-navbar is-info">
     <div className="hero-body">
       <div className="container">
-        <h1 className="title is-1">The Home Page</h1>
+        <h1 className="title is-1 has-text-centered hero-heading">POW!</h1>
+        <h2 className="subtitle is-2 has-text-centered hero-heading">Your #1 source of superhero data</h2>
       </div>
     </div>
   </section>

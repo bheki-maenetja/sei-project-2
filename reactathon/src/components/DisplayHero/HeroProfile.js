@@ -11,10 +11,8 @@ class HeroProfile extends React.Component {
 
   async componentDidMount() {
     const heroId = this.props.match.params.id
-    console.log(heroId)
     try {
       const res = await axios.get(`https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/${heroId}.json`)
-      console.log(res.data)
       this.setState({ heroData: res.data })
     } catch (err) {
       console.log('Error', err)
@@ -25,13 +23,13 @@ class HeroProfile extends React.Component {
     if (!this.state.heroData) return false
     const { name, biography, work, connections } = this.state.heroData
     return (
-      <section className="section">
+      <section className="section hero-profile">
         <div className="container">
           <h2 className="title">{name}</h2>
           <hr />
           <div className="columns">
             <div className="column is-half">
-              <SinglePlayerCard 
+              <SinglePlayerCard
                 choiceObject={this.state.heroData}
                 choiceBoolean={false}
                 handleConfirm={() => ''}
@@ -44,9 +42,13 @@ class HeroProfile extends React.Component {
               {Object.keys(biography).map(item => {
                 return (
                   <>
+                  {!!biography[item] &&
+                  <>
                   <h5 className="title is-5">{item.toUpperCase()}</h5>
                   <p>{typeof biography[item] === 'string' ? biography[item] : biography[item].join(', ')}</p>
                   <hr />
+                  </>
+                  }
                   </>
                 )
               })}
@@ -55,9 +57,13 @@ class HeroProfile extends React.Component {
               {Object.keys(work).map(item => {
                 return (
                   <>
+                  {!!work[item] &&
+                  <>
                   <h5 className="title is-5">{item.toUpperCase()}</h5>
                   <p>{work[item]}</p>
                   <hr />
+                  </>
+                  }
                   </>
                 )
               })}
@@ -66,9 +72,13 @@ class HeroProfile extends React.Component {
               {Object.keys(connections).map(item => {
                 return (
                   <>
+                  {!!connections[item] &&
+                  <>
                   <h5 className="title is-5">{item.toUpperCase()}</h5>
                   <p>{typeof connections[item] === 'string' ? connections[item] : connections[item].join(', ')}</p>
                   <hr />
+                  </>
+                  }
                   </>
                 )
               })}

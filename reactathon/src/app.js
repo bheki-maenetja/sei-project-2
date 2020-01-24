@@ -8,14 +8,14 @@ import './stylesheets/main.scss'
 
 import Home from './components/common/Home'
 import Navbar from './components/common/Navbar'
-import ExternalLinks from './components/common/ExternalLinks'
 
+import ErrorPage from './components/common/ErrorPage'
 
 import HeroIndex from './components/HeroDirectory/HeroIndex'
-
+import HeroProfile from './components/DisplayHero/HeroProfile'
 import SinglePlayer from './components/HeroBattles/SinglePlayer'
 
-import HeroProfile from './components/DisplayHero/HeroProfile'
+import ExternalLinks from './components/common/ExternalLinks'
 
 const App = () => (
   
@@ -28,6 +28,7 @@ const App = () => (
       <Route path="/heroes" component={HeroIndex} />
       <Route path="/battles/single-player" component={SinglePlayer} />
       <Route path="/external-links" component={ExternalLinks} />
+      <Route path="/:anything" component={ErrorPage} />
     </Switch>
     </>
   </BrowserRouter>

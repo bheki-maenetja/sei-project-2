@@ -19,12 +19,12 @@ class ExternalLinks extends React.Component {
 
   render() {
     return (
-      <section className="section">
+      <section className="section ex-link">
         <h1 className="title is-2">Explore more places from the world of Superheroes</h1>
         <div className="container">
           <div className="columns">
             <div className="column is-fullwidth">
-              <iframe src={this.state.chosenSite} style={ { width: '100%', height: '70vh' } }></iframe>
+              <iframe src={this.state.chosenSite} ></iframe>
             </div>
           </div>
         </div>
@@ -58,6 +58,5 @@ class ExternalLinks extends React.Component {
     )
   }
 }
-
 
 export default ExternalLinks

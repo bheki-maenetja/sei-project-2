@@ -3,7 +3,7 @@ import React from 'react'
 
 const SinglePlayerCard = ({ choiceObject, choiceBoolean, handleConfirm, buttonName }) => (
   <>
-  <div className="card hero-card">
+  <div className="card single-player-card">
     <div className="card-image">
       <figure className="image">
         <img src={choiceObject.images.lg} alt="player choice" />

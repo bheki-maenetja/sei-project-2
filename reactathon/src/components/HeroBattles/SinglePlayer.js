@@ -41,12 +41,6 @@ class SinglePlayer extends React.Component {
     this.setState({ [e.target.name]: true })
   }
 
-  getSecondChoice = () => {
-    const newData = this.state.data.filter(item => item.id !== this.state.firstChoice.id)
-    const secondChoice = newData[Math.floor(Math.random() * newData.length)]
-    return secondChoice
-  }
-
   findWinner = () => {
     const playerStatNames = Object.keys(this.state.firstChoice.powerstats)
     const playerStatValues = playerStatNames.map(item => this.state.firstChoice.powerstats[item])
@@ -56,18 +50,15 @@ class SinglePlayer extends React.Component {
     const compStatValues = compStatNames.map(item => this.state.secondChoice.powerstats[item])
     const compTotal = compStatValues.reduce((acc, i) => acc + i, 0)
 
-    let result
     if (playerTotal > compTotal) {
-      result = 'player wins!'
       this.setState({ winner: 'firstChoice', gameInPlay: true })
     } else if (compTotal > playerTotal) {
-      result = 'computer wins'
       this.setState({ winner: 'secondChoice', gameInPlay: true })
     } else {
-      result = 'it\'s a draw!'
       this.setState({ gameInPlay: true })
     }
-    console.log(result)
+    
+    console.log('First Choice:', playerTotal, 'Second Choice:', compTotal)
   }
 
   resetPage = () => {
@@ -83,7 +74,6 @@ class SinglePlayer extends React.Component {
 
   render() {
     if (!this.state.firstChoice) return false
-    console.log(this.state)
     return (
       <section className="section hero-battle">
         <div className="container">
@@ -105,7 +95,7 @@ class SinglePlayer extends React.Component {
                 />
                 }
               </div>
-              {this.state.gameInPlay && <h1 className="title is-1">{this.state.winner === 'firstChoice' ? 'Winner' : 'Loser'}</h1>}
+              {this.state.gameInPlay && <h1 className="title is-1">{this.state.winner === 'firstChoice' ? 'Winner' : this.state.winner === 'secondChoice' ? 'Loser' : 'Draw'}</h1>}
               <SinglePlayerCard 
                 choiceObject={this.state.firstChoice}
                 choiceBoolean={!this.state.gotFirstChoice}
@@ -126,7 +116,7 @@ class SinglePlayer extends React.Component {
                 />
                 }
               </div>
-              {this.state.gameInPlay && <h1 className="title is-1">{this.state.winner === 'secondChoice' ? 'Winner' : 'Loser'}</h1>}
+              {this.state.gameInPlay && <h1 className="title is-1">{this.state.winner === 'secondChoice' ? 'Winner' : this.state.winner === 'firstChoice' ? 'Loser' : 'Draw'}</h1>}
               <SinglePlayerCard 
                 choiceObject={this.state.secondChoice}
                 choiceBoolean={this.state.gotFirstChoice && !this.state.gotSecondChoice}

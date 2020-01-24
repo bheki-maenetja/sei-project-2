@@ -1,0 +1,15 @@
+.navbar{
+  height: 10vh;
+  font-weight: bold;
+  font-size: 20px;
+  
+  .navbar-item{
+    color: white;
+  }
+
+  .hero-logo {
+    background-image: url('https://media.giphy.com/media/Rlqjt1mnxiwdICh5FW/giphy.gif');
+    background-size: cover;
+    width: 100px;
+  }
+}

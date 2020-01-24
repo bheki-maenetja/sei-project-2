@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 
 class Navbar extends React.Component {
 
-   state= {
-     isNavbarOpen: false
-   }
+   state= { isNavbarOpen: false }
 
    toggleNavbar = () => {
      this.setState({ isNavbarOpen: !this.state.isNavbarOpen })
@@ -17,7 +15,7 @@ class Navbar extends React.Component {
        <nav className="navbar is-dark">
          <div className="container">
            <div className="navbar-brand">
-             <Link className="navbar-item" to="/"><img src="https://ih1.redbubble.net/image.481056601.4148/flat,550x550,075,f.u1.jpg" /></Link>
+             <Link className="navbar-item hero-logo" to="/"></Link>
              <a className={`navbar-burger ${this.state.isNavbarOpen ? 'is-active' : ''}`} onClick={this.toggleNavbar}>
                <span></span>
                <span></span>

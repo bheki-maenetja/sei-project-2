@@ -1,0 +1,15 @@
+.hero-profile{
+  background-image: url('https://media3.giphy.com/media/3o7aDcrsww5Ybp18hq/giphy.gif?cid=790b76110abdec8b4f1c66c3911c2d95ebb45e14fbba7f4b&rid=giphy.gif');
+
+  h2 {
+    color: white;
+    font-weight: bold;
+  }
+
+  .is-half:nth-child(2) {
+    * {
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

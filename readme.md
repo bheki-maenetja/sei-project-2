@@ -24,15 +24,15 @@ This project is a superhero information website. Users can search for their favo
 
 <div style="display: flex; justify-content: space-between; width:100%">
 	<div style="width: 32%">
-		<img src="src/assets/screenshot-homePage.png" width="32%" alt="home page"/>
+		<img src="src/assets/screenshot-homePage.png" alt="home page"/>
 		<figcaption>Home Page</figcaption>
 	</div>
 	<div style="width: 32%">
-		<img src="src/assets/screenshot-heroIndex.png" width="32%" alt="hero directory" />
+		<img src="src/assets/screenshot-heroIndex.png" alt="hero directory" />
 		<figcaption>Hero Directory</figcaption>
 	</div>
 	<div style="width: 32%">
-		<img src="src/assets/screenshot-heroShow.png" width="32%" alt="hero info" />
+		<img src="src/assets/screenshot-heroShow.png" alt="hero info" />
 		<figcaption>Hero Information Page</figcaption>
 	</div>
 </div>

@@ -23,7 +23,7 @@ My second project for the General Assembly Software Engineering Immersive course
 This project is a superhero information website. Users can search for their favourite superheroes (or supervillains) and find a wealth of information about their origins, connections, occupations and so much more. The site also includes a nifty comparison tool that allows users to compare the power stats of different superheroes.
 
 <div style="display: flex; justify-content: space-between">
-	<figure style="">
+	<figure style="display: flex; flex-direction: column">
 		<img src="src/assets/screenshot-homePage.png" width="48%" alt="home page" />
 		<figcaption>Home Page</figcaption>
 	</figure>

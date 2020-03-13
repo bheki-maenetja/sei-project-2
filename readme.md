@@ -21,7 +21,7 @@ My second project for the General Assembly Software Engineering Immersive course
   * [SuperHero API](https://akabab.github.io/superhero-api/api/)
 
 ## How It Works
-This project is a superhero information website. Users can search for their favourite superheroes (or supervillains) and find a wealth of information about their origins, connections, occupations and so much more. The site also includes a nifty comparison tool that allows users to compare the power stats of different superheroes.
+This project is a superhero information website. Users can search for their favourite superheroes (or supervillains) and find a wealth of information about their origins, connections, occupations and so much more. The site also includes a nifty [comparison tool](https://res.cloudinary.com/dyed10v2u/video/upload/v1584102316/screenshot-heroCompare_dvzasa.mov) that allows users to compare the power stats of different superheroes.
 
 
 <div style="display: flex; justify-content: space-between">

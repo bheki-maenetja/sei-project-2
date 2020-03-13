@@ -39,12 +39,12 @@ This project is a superhero information website. Users can search for their favo
 	</div>
 </div>
 
-<div>
+<figure>
 	<figcaption>Hero Comparison Tool</figcaption>
 	<video autoplay loop style="width:100%">
 		<source src="https://res.cloudinary.com/dyed10v2u/video/upload/v1584102316/screenshot-heroCompare_dvzasa.mov" type="video/mp4"></source>
 	</video>
-</div>
+</figure>
 
 ## Approach
 Given that this project was our first foray into ReactJS, it does lean heavily on React components. We carefully mapped out which React components would be needed for the different pages of the site. These included several reusable componenets such as the superhero search form and 'hero cards' which display the name of a superhero and their power stats.

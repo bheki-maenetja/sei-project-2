@@ -21,7 +21,7 @@ My second project for the General Assembly Software Engineering Immersive course
   * [SuperHero API](https://akabab.github.io/superhero-api/api/)
 
 ## How It Works
-This project is a superhero information website. Users can search for their favourite superheroes (or supervillains) and find a wealth of information about their origins, connections, occupations and so much more. The site also includes a nifty [comparison tool](https://res.cloudinary.com/dyed10v2u/video/upload/v1584102316/screenshot-heroCompare_dvzasa.mov) that allows users to compare the power stats of different superheroes.
+This project is a superhero information website. Users can search for their favourite superheroes (or supervillains) and find a wealth of information about their origins, connections, occupations and so much more. The site also includes a nifty comparison tool that allows users to compare the power stats of different superheroes.
 
 
 <div style="display: flex; justify-content: space-between">
@@ -38,6 +38,11 @@ This project is a superhero information website. Users can search for their favo
 		<img src="src/assets/screenshot-heroShow.png" alt="hero info" />
 	</div>
 </div>
+
+<figcaption>Hero Comparison Tool</figcaption>
+<video autoplay loop style="width:100%">
+	<source src="https://res.cloudinary.com/dyed10v2u/video/upload/v1584102316/screenshot-heroCompare_dvzasa.mov" type="video/mp4" />
+</video>
 
 ## Approach
 Given that this project was our first foray into ReactJS, it does lean heavily on React components. We carefully mapped out which React components would be needed for the different pages of the site. These included several reusable componenets such as the superhero search form and 'hero cards' which display the name of a superhero and their power stats.

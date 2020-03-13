@@ -20,7 +20,7 @@ My second project for the General Assembly Software Engineering Immersive course
 * Third-party APIs
   * [SuperHero API](https://akabab.github.io/superhero-api/api/)
 
-## How It Works
+## Overview
 This project is a superhero information website. Users can search for their favourite superheroes (or supervillains) and find a wealth of information about their origins, connections, occupations and so much more. The site also includes a nifty comparison tool that allows users to compare the power stats of different superheroes.
 
 
@@ -43,4 +43,4 @@ This project is a superhero information website. Users can search for their favo
 Given that this project was our first foray into ReactJS, it does lean heavily on React components. We carefully mapped out which React components would be needed for the different pages of the site. These included several reusable componenets such as the superhero search form and 'hero cards' which display the name of a superhero and their power stats.
 
 ### The SuperHero API
-- 
+- As stated in the project brief, one of the main requirements for the project is that it consumes a third-party API. For our project we chose the [SuperHero API](https://akabab.github.io/superhero-api/api/) published by [Yoann Criber](https://github.com/akabab)

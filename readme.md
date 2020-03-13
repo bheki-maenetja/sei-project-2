@@ -40,7 +40,7 @@ This project is a superhero information website. Users can search for their favo
 </div>
 
 <figure class="video_container">
-	<video autoplay loop style="width:100%">
+	<video autoplay="true" loop="true" controls="false" style="width:100%">
 		<source src="https://i.imgur.com/6cc7Z9K.mp4" type="video/mp4" />
 	</video>
 </figure>

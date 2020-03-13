@@ -42,7 +42,7 @@ This project is a superhero information website. Users can search for their favo
 <figure>
 	<figcaption>Hero Comparison Tool</figcaption>
 	<video autoplay loop style="width:100%">
-		<source src="src/assets/screenshot-heroCompare.mp4" type="video/mp4" />
+		<source src="https://i.imgur.com/6cc7Z9K.mp4" type="video/mp4" />
 	</video>
 </figure>
 

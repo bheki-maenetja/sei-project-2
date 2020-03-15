@@ -37,7 +37,7 @@ This project is a superhero information website. Users can search for their favo
 		<figcaption>Hero Information Page</figcaption>
 		<img src="src/assets/screenshot-heroShow.png" alt="hero info" />
 	</div>
-	<div style="width: 24%>
+	<div style="width: 24%">
 		<figcaption>Hero Comparison Tool</figcaption>
 		<img src="src/assets/screenshot-heroCompare.gif" alt="hero comparison" />
 	</div>

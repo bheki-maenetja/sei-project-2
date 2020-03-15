@@ -134,7 +134,6 @@ getPublishers = () => {
 ```
 
 ### Supehero Comparison Tool
-- The
 
 
 

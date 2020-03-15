@@ -37,11 +37,9 @@ This project is a superhero information website. Users can search for their favo
 		<figcaption>Hero Information Page</figcaption>
 		<img src="src/assets/screenshot-heroShow.png" alt="hero info" />
 	</div>
-	<div style="width: 24%">
-		<figcaption>Hero Comparison Tool</figcaption>
-		<img src="src/assets/screenshot-heroCompare.gif" alt="hero comparison" />
-	</div>
 </div>
+
+![](src/assets/screenshot-heroCompare.gif)
 
 ## Approach
 Given that this project was our first foray into ReactJS, it does lean heavily on React components. We carefully mapped out which React components would be needed for the different pages of the site. These included several reusable componenets such as the superhero search form and 'hero cards' which display the name of a superhero and their respective power stats.
